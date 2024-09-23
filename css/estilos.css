@@ -1,0 +1,887 @@
+* 
+/* Restablece los estilos CSS por defecto */
+* {
+  margin: 0; /* Elimina el margen por defecto */
+  padding: 0; /* Elimina el relleno por defecto */
+  box-sizing: border-box; /* Establece el modelo de caja para incluir el borde y el relleno */
+  
+  list-style: none; /* Elimina los estilos de lista por defecto */
+  scroll-behavior: smooth; /* Establece el comportamiento de desplazamiento suave */
+  font-family: 'Montserrat';
+  src: url('letra1-Bold.ttf') format('ttf'),
+       url('letra1-Bold.ttf') format('ttf'),
+       url('Montserrat-Regular.ttf') format('ttf');
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  
+  
+}
+
+
+*:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+
+  
+
+
+/* Define variables CSS globales */
+:root {
+  --fondo-color: #06080D;
+  --text-color: #ffff;
+  --titulos: #22A2F2;
+  --navbar-height: 60px;
+  --container-width: 1200px;
+  --container-height: 800px;
+  --otro-color:#1B8EF2;
+  --hover:#1A2E40;
+}
+
+html{
+  overflow-x: hidden; /* Oculta el desbordamiento horizontal */
+}
+
+
+body{
+    background-color: var(--fondo-color);
+    
+}
+
+
+#menu-icono{
+  font-size: 3.5rem;
+  color: var(--otro-color);
+  display: none;
+  
+}
+.smooth-scroll {
+  transition: all 0.5s ease-in-out;
+}
+
+.smooth-scroll:hover {
+  cursor: pointer;
+}
+/* Estilos para los enlaces */
+a {
+    color: var(--text-color); /* color de texto */
+    text-decoration: none; /* elimina la decoracion de texto */
+    font-weight: bold; /* negrita */
+  }
+
+  /* Estilos para la barra de navegación */
+header {
+  position: fixed; /* Establece la posición fija */
+  width: 100%; /* Establece el ancho al 100% */
+  top: 0; /* Establece la posición superior a 0 */
+  left: 0; /* Establece la posición izquierda a 0 */
+  padding: 4rem 15%; /* Agrega relleno */
+  background-color: #06080d2f; /* Establece el color de fondo con transparencia */
+  backdrop-filter: blur(10px); /* Agrega un efecto de desenfoque */
+
+  display: flex; /* Establece el contenedor como flexbox */
+  justify-content: space-between; /* Distribuye los elementos horizontalmente */
+  align-items: center; /* Centra los elementos verticalmente */
+  z-index: 1000; /* Establece el índice z a 1000 */
+}
+
+  .navbar a{
+    margin-left: 4rem; /* Agrega un margen izquierdo para los enlaces de la barra de navegación */
+   transition: 0.3s ease ease-in-out;
+   border-bottom: 3px solid transparent; 
+   
+  }
+
+  .navbar a:hover{
+    color: var(--titulos);
+    border-bottom: 3px  var(--titulos); /* al pasar el cursor cambia de color */
+
+
+  }
+
+  
+  header {
+    display: flex; /* Establece el contenedor como flexbox */
+    align-items: center; /* Centra los elementos verticalmente */
+    height: 60px; /* Establece la altura del navbar */
+  }
+  
+  .logo {
+    height: 50px; /* Ajusta el tamaño del logo */
+    margin: 10px; /* Ajusta el margen para que se alinee con el navbar */
+  }
+  
+  .navbar {
+    display: flex; /* Establece el navbar como flexbox */
+    justify-content: space-between; /* Distribuye los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+    height: 100%; /* Establece la altura del navbar como 100% del contenedor */
+  }
+
+  .logo{
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+
+  .logo:hover{
+    transform: scale(1.1);
+  }
+
+  .container {
+    width: 1920px; /* Ancho máximo recomendado */
+    height: 1080px; /* Alto máximo recomendado */
+    margin: auto;
+  
+  }
+ 
+
+  
+  #cabezote{
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    
+    width: 100%; /* Cambia a 100% */
+    height: 1080px; /* Alto máximo */
+  }
+  
+  
+
+.mensaje-de-benvenida{
+  color: var(--text-color);
+  font-weight: bold;
+  font-size: 45px;
+  padding: 20px;
+  margin-top: 50px; /* Agrega un margen superior de 50px */
+  
+ 
+}
+
+
+.partperfil{
+  margin-left: 5rem;
+  display: flex;
+  margin-right: 10px;
+}
+
+.jimmy-img{
+  border-radius: 20%;
+  box-shadow: 0 0 25PX var(--otro-color);
+  transition: 0.4s ease-in-out;
+  width: 600px;
+  height: 600px;
+}
+.jimmy-img:hover{
+  box-shadow: 0 0 25PX var(--otro-color); /* al pasar el cursor se va pasando mas la sombra */
+  box-shadow: 0 0 50PX var(--otro-color);
+  box-shadow: 0 0 100PX var(--otro-color);
+
+            
+  
+}
+
+.perfl-enl{
+  font-weight: bold;
+  font-size: 35px;
+  color: var(--titulos);
+margin: 20px ;
+}
+
+.perfl-enl:hover{
+  color: #1A2E40; 
+    border-bottom: 3px  var(--titulos); /* al pasar el cursor cambia de color */
+}
+
+.textperfil{
+  text-align: justify;
+margin-left: auto;
+color: var(--text-color);
+margin: 30px;
+font-size: 40px;
+
+}
+
+
+.textperfil h2 span{
+  background: linear-gradient( 70deg, #84cffd,#22A2F2);
+  -webkit-background-clip: text;
+  color: transparent;  
+}
+.desripcion {
+  text-align: justify;
+  margin-left: 0;
+  text-align: left;
+  color: var(--text-color);
+  margin-top: 10px;
+  line-height: 1.5;
+  font-size: 16px; /* Reduce el tamaño de la fuente */
+  font-weight: normal; /* Cambia a normal */
+  
+}
+
+
+
+.boton{
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 10PX;
+}
+
+.boton-cv{
+  display: inline-block;
+  padding: 1rem;
+  background: linear-gradient(116deg,#84cffd,#22A2F2); /* Agrega un degradado azul-verde */
+  border-radius: 1rem;
+  box-shadow: 0 0 25PX var(--otro-color);
+ border: 2px solid transparent;
+  color: var(--text-color);
+  font-weight: bold;
+  font-size: 15px;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+
+
+.boton-cv:hover{
+  transform: scale(1.05);
+  box-shadow: 0 0 25px var(--otro-color);
+  box-shadow: 0 0 50PX var(--otro-color);
+  
+}
+
+
+.grupo-programs {
+  display: flex;
+align-items: center;
+justify-content: center;
+ 
+  color: var(--titulos);
+  font-weight: bold;
+  font-size: 24px;
+  margin-top: 30px;
+  
+}
+
+
+
+.programas {
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: center;
+  
+  
+  transition: 0.3s ease-in-out;
+}
+
+.programas img {
+  width: 50px; /* ajusta el ancho de las imágenes */
+  height: 50px; /* ajusta el alto de las imágenes */
+  margin: 30px; /* agrega un margen entre las imágenes */
+  border-radius: 10px; /* agrega un borde redondeado */
+  box-shadow: 0 0 25PX var(--otro-color);
+
+}
+
+.programas img:hover {
+  transform: scale(1.1); /* agrega un efecto de zoom al pasar el cursor */
+  box-shadow: 0 0 50PX var(--otro-color);
+
+}
+
+
+
+::-webkit-scrollbar{
+  width: 10px;
+  
+}
+
+::-webkit-scrollbar-thumb{
+  background: linear-gradient( 360deg, #84cffd,#22A2F2);
+  
+ 
+}
+::-webkit-scrollbar-track{
+  background-color: var(--fondo-color);
+ 
+}
+
+.services-box{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
+  gap: 1rem;
+  row-gap: 5rem;
+  margin: 20px;
+}
+
+
+.servicios-card{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+
+border-radius: 5%;
+gap: 2rem;
+padding: 1rem 1rem;
+overflow: hidden;
+cursor: pointer;
+
+transition: 0.3s ease;
+}
+
+.servicios-card:hover{
+  box-shadow: 0 0 25PX var(--otro-color); /* al pasar el cursor se va pasando mas la sombra */
+  box-shadow: 0 0 50PX var(--otro-color);
+ transform: scale(1.02);
+}
+
+.servicios-card img{
+max-width: 300px;
+border-radius: 10%;
+
+}
+
+
+.servicios-card h3{
+  background: linear-gradient( 70deg, #84cffd,#22A2F2);
+  border-radius: 1rem;
+padding: 5px;
+  font-weight: 800;
+
+}
+
+.servicios-card p{
+  color: var(--text-color);
+}
+
+.boton-servicios{
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 10PX;
+}
+
+.boton-servicios{
+  display: inline-block;
+  padding: 1rem;
+  background: linear-gradient(116deg,#84cffd,#22A2F2); /* Agrega un degradado azul-verde */
+  border-radius: 1rem;
+  box-shadow: 0 0 25PX var(--otro-color);
+ border: 2px solid transparent;
+  color: var(--text-color);
+  font-weight: bold;
+  font-size: 15px;
+  transition: 0.3s ease-in-out;
+}
+
+
+
+.boton-servicios:hover{
+  transform: scale(1.05);
+  box-shadow: 0 0 25px var(--otro-color);
+  box-shadow: 0 0 50PX var(--otro-color);
+}
+
+/* CATEGORIASS */
+
+
+.categorias ul{
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
+  font-weight: bold;
+  font: bold;
+  text-transform: uppercase;
+}
+
+.categorias ul li{
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.categorias ul li:hover{
+  color: var(--titulos);
+  border-bottom: 3px  var(--titulos); /* al pasar el cursor cambia de color */
+  transform: scale(1.1);
+/* --------- */
+
+}
+#fotografia-btn,#web-btn, #audiovisual-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;/* margen izquierda */
+    margin-right: auto; /* margen derecha  */
+cursor: pointer;
+}
+
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  
+}
+
+button {
+  display: inline-block;
+  margin: 10px;
+  padding: 5px 5px;
+background: var(--titulos);
+  border-radius: 5px;
+
+ border: 2px solid transparent;
+  color: var(--text-color);
+  font-weight: bold;
+  font-size: 15px;
+  transition: 0.3s ease-in-out;
+}
+
+ button:hover {
+  color: var(--hover);
+  border-bottom: 3px  var(--hover); /* al pasar el cursor cambia de color */
+  box-shadow: inset 0 0 20px rgba(49, 138, 172, 0.5), 0 0 20px rgba(49, 138, 172, 0.4);
+  
+}
+.fotografia-active .gallery{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr ));
+  grid-gap:30px ;
+
+}
+
+.fotografia-active .gallery img{
+  width: 100%;
+}
+
+
+.row {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0;
+  clear: both;
+}
+
+#fotografia-btn{
+   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* proyectos videos */
+
+.video-container{
+  display: flex;
+  flex-wrap: wrap;
+gap: 15px;
+justify-content: center;
+padding: 10px;
+margin-top: 5rem
+
+}
+.video-container .video{
+   height: 250px;
+   width: 350px;
+   border: 1 solid ;
+   border-radius: 5px ;
+   box-shadow: 0 5px 15px rgba(0, 0,0,.7 );
+   cursor: pointer;
+  overflow: hidden;
+}
+
+.video-container .video video{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: .2s linear ;
+}
+
+.video-container .video:hover video{
+  transform: scale(1.1);
+}
+.popup-video video {
+  width: 90%; /* ocupa el 90% del ancho de la pantalla */
+ margin: 0 auto;
+ margin-top: 10px;
+  display: block; /* hace que el video sea un elemento de bloque */
+}
+
+
+ 
+
+
+
+
+
+.galeriacon{
+min-height: 100%;
+margin-top: 2rem;
+}
+/* web */
+.web-image img {
+  margin: 0 auto;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-proyectos{
+  color: var(--titulos);
+  font-weight: bold;
+  font-size: 25px;
+  padding: 20px;
+  margin-top: 30px; /* Agrega un margen superior de 50px */
+}
+
+
+.informacion{
+  text-align: justify;
+  margin-left: 0;
+  text-align: center;
+  color: var(--text-color);
+  margin-top: 10px;
+  line-height: 1.5;
+  font-size: 16px; /* Reduce el tamaño de la fuente */
+  font-weight: normal; /* Cambia a normal */
+}
+
+
+.web-active .gallery{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr ));
+  grid-gap:30px ;
+
+}
+
+.web-active .gallery img{
+  width: 100%;
+}
+
+
+.raw {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0;
+  clear: both;
+}
+
+/* --- */
+
+/* branding */
+
+.branding-active .gallery{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr ));
+  grid-gap:30px ;
+
+}
+
+.branding-active .gallery img{
+  width: 100%;
+}
+
+
+.rew {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0;
+  margin-top: 20px;
+  clear: both;
+}
+
+
+
+.branding-image img {
+  margin: 0 auto;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+.logo2{
+  cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.logo2:hover:hover{
+  transform: scale(1.1);
+
+}
+/* branding--- */
+
+
+
+/* posters */
+
+.posters-active .gallery{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr ));
+  grid-gap:30px ;
+
+}
+
+.posters-active .gallery img{
+  width: 100%;
+}
+
+
+.ruw {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0;
+  margin-top: 200px;
+  clear: both;
+}
+
+/* CONTACTOS */
+
+
+
+
+
+
+
+
+
+.contacto{
+  background-color: var(--fondo-color);
+}
+
+.contacto form{
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 3rem;
+  
+  margin: 5rem 15rem;
+  margin-right: 1rem;
+  text-align: center;
+}
+
+.contacto form .input-box input,
+.contacto form textarea{
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  color: var(--text-color);
+  background-color: var(--fondo-color);
+  border-radius: 1rem;
+  border: 2px solid var(--otro-color);
+  margin: 0.4rem 0;
+
+}
+
+.grupote{
+  display: flex;
+  align-items: center;
+
+}
+.parte-contact a i{
+  color: #1B8EF2;
+  font-size: 25px;
+  
+}
+.parte-contact {
+  margin-right: 600px;
+
+}
+
+.parte-contact ul li a {
+  display: block;
+  margin-bottom: 30px;
+}
+
+
+.parte-contact ul li a i {
+  display: inline-block;
+  margin-bottom: 30px;
+  margin-left: 200px;
+  
+}
+i p {
+  transition: 0.3s ease-in-out;
+  display: inline-block;
+  font-family: 'Montserrat';
+  src: url(letra1-Bold.ttf);
+  font-size: 20px; /* reemplaza con el tamaño de fuente que deseas */
+  font-weight: bold;
+  color: white; /* reemplaza con el color de texto que deseas */
+}
+
+i p:hover{
+  color: var(--hover);
+  border-bottom: 3px  var(--hover); /* al pasar el cursor cambia de color */
+transform: scale(1.02);
+}
+
+
+
+.social-icons a i{
+display: inline-block;
+ justify-content: center;
+ align-items: center;
+ font-size: 2rem;
+ padding: 7px;
+ background: transparent;
+border: 2px solid var(--otro-color);
+border-radius: 50%;
+color: var(--otro-color);
+margin: 1rem 0.5rem;
+
+
+
+
+}
+
+.footer{
+  background-color: var(--hoverr);
+  padding: 50px 0;
+
+}
+
+.footer .social-icons{
+  text-align: center;
+}
+
+
+
+.footer .copyright{
+  color: var(--text-color);
+  text-align: center;
+}
+
+
+
+@media (max-width: 768px){
+  .video-container .popup-video video{
+    width: 95%;
+  }
+ }
+ 
+
+ @media (max-width: 1200px) { /* minimo de 1200 pa arriba cambia a azul */
+  #menu-icono{
+  display: block;
+  }
+  .navbar{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 50%;
+    padding: 1rem 3rem;
+    background: #06080dde;
+    border-bottom-left-radius: 2rem;
+    border-left: 2px solid var(--otro-color);
+    border-bottom: 2px solid var(--otro-color);
+    display: none;
+    
+  }
+
+  .navbar a{
+    display: block;
+    font-size: 2rem;
+    margin: 1rem 0;
+
+  }
+
+
+  .navbar.active{
+    display: block;
+  }
+
+
+  .mensaje-de-benvenida{
+    align-items: center;
+    text-align: center;
+    font-size: 30px;
+    margin-left: 15rem;
+  }
+
+  .partperfil{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: 15rem;
+    
+
+  }
+  .textperfil{
+    align-items: center;
+    text-align: center;
+  }
+
+
+  .textperfil h2{
+    font-size: 50px;
+    margin: 20px;
+  }
+
+   p.desripcion {
+    display: flex;
+    text-align: justify;
+margin: 100px;
+align-items: center;
+    text-align: center;
+    color: var(--text-color);
+    margin-top: 10px;
+    line-height: 1.5;
+    font-size: 26px; /* Reduce el tamaño de la fuente */
+    font-weight: normal; /* Cambia a normal */
+   
+  }
+
+  .boton{
+
+    display: flex;
+  justify-content: center;
+  }
+
+ .boton-cv{
+  font-size: 40px;
+    text-align: center;
+
+  }
+
+  .perfl-enl {
+    text-align: center;
+  }
+  .perfl-enl a {
+    display: inline-block;
+    text-align: center;
+  }
+  
+  
+  @media (min-width: 1360px) and (min-height: 768px) {
+  .container {
+    width: 1920px; /* o cualquier otro valor que desees */
+    height: 1080px; /* o cualquier otro valor que desees */
+  }
+  
+  #cabezote {
+    width: 1920px; /* para que ocupe todo el ancho */
+    height: 1080px; /* o cualquier otro valor que desees */
+    background-image: url('img/1920.jpg'); /* imagen para pantallas grandes */
+    background-size: cover; /* para que la imagen se ajuste al tamaño del contenedor */
+  }
+
+}
+
+ }
